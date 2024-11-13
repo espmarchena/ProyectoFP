@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;estudiandoparaelexamen.e0411&apos; to &apos;CadenaNumericaTransformarNumeros&apos;&#x0D;&#x0A;- Original project: &apos;PrimerTrimestreProgramacion&apos;&#x0D;&#x0A;- Original element: &apos;estudiandoparaelexamen.e0411&apos;&#x0D;&#x0A;- Renamed element: &apos;estudiandoparaelexamen.CadenaNumericaTransformarNumeros&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;e0411&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;estudiandoparaelexamen{e0411.java[e0411" matchStrategy="1" name="CadenaNumericaTransformarNumeros" qualified="false" references="true" similarDeclarations="false" stamp="1730709322510" textual="false" version="1.0"/>
+</session>

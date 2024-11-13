@@ -1,0 +1,42 @@
+package deberesenclase;
+
+import java.util.Scanner;
+
+public class Funciones2910 {
+
+	public static void main(String[] args) {
+	//pedir cadena texto y usar funcion que cree tabla con la longitud de la cadena y diga si cada caracter es mayus o minus
+	
+		Scanner sc = new Scanner (System.in);	
+		System.out.println("Cadena de texto:");
+		String s = sc.nextLine();
+		
+		String tabla[] = new String [s.length()]; 
+		System.out.println("La longitud será de: " + s.length()); // imprimo la longitud de mi tabla  
+		
+		for (int i =0; i<s.length(); i++) {
+			
+		}
+		
+	sc.close();
+	}
+	
+	
+	public static String[] ObtenerTablaMayus (String s) {
+		
+	
+		
+	
+	return tabla;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

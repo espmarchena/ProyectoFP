@@ -1,0 +1,49 @@
+package estudiandoparaelexamen1;
+
+import java.util.Scanner;
+
+public class ComprobarCadenaTexto {
+
+	public static void main(String[] args) {
+		// 1 cuantas mayus 2 minus 3 numeros 4caracteresespeciales
+		
+		Scanner sc = new Scanner (System.in);
+		int opcion = sc.nextInt();
+		String cadena = sc.nextLine();
+		boolean Mayus= true;
+		boolean Minus= true;
+		boolean Nums= true;
+		boolean CarEsp= true;
+		
+		do {
+			switch(opcion){
+			
+				case 1:
+					
+					if(Mayus) {
+						System.out.println(cadena.length());
+					}
+				break;
+					
+				case 2:
+				break;
+				
+				case 3:
+				break;
+					
+				case 4:
+				break;
+			
+				default:
+			
+			}	
+			
+		}
+		while(opcion!=5);
+		
+		
+		
+		sc.close();
+	}
+
+}

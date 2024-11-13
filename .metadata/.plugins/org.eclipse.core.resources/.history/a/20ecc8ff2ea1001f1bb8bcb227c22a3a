@@ -1,0 +1,19 @@
+package estudiandoparaelexamen1;
+
+import java.util.Scanner;
+
+public class ex1211 {
+
+	public static void main(String[] args) {
+		 
+        
+        int num;
+        Scanner sc = new Scanner(System.in);
+        do{
+            System.out.println("Introduce un numero mayor que 0");
+            num=sc.nextInt();
+        }while(num>=0);
+ 
+        System.out.println(num);
+    }
+}

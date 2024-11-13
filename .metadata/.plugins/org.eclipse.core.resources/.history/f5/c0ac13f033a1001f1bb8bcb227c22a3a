@@ -1,0 +1,405 @@
+package proyecto;
+
+import java.util.Scanner;
+
+public class AltaUsuarios {
+	static Scanner sc; // DECLARO SCANNER FUERA DE LOS AMBITOS DE LAS FUNCIONES PARA PODERLO USAR EN TODAS
+
+	// DECLARACION DE ARRAYS PARA GUARDAR INFORMACION DE LOS USUARIOS (FUERA DE LOS AMBITOS DE LAS FUNCIONES PARA PODERLO USAR EN TODAS)
+	static String[] nombres = new String[100];
+    static String[] apellidos = new String[100];
+    static String[] mails = new String[100];
+    static String[] telefonos = new String[100];
+    static String[] dnis = new String[100];
+    static String[] fechasNacimiento = new String[100];
+    static String[] logins = new String[100];
+    static String[] passwords = new String[100];
+
+    static int contadorUsuarios = 0; // Contador de usuarios registrados
+	
+    public static void main(String[] args) {
+    	sc = new Scanner(System.in);
+
+        
+        
+        
+        // Bucle de registro de usuarios
+        while (true) {
+            System.out.println("\n--- Alta de Usuario ---");
+
+           
+            
+            // VALIDAR NOMBRE Y APELLIDO
+            Validar();
+              
+            
+   
+            //VALIDAR EMAIL
+            
+            
+           do { 
+        	   validarMail();
+        	   
+        	   
+           }while(!esValido);
+           mails[contadorUsuarios] = email;
+            
+     
+
+        
+           
+           
+           // VALIDAR TELEFONO (9 caracteres y solo numéricos sin usar métodos)
+            String telefono;
+            boolean telefonoValido;
+            do {
+                System.out.print("Teléfono (9 dígitos): ");
+                telefono = sc.nextLine();
+                
+                // Verificar que la longitud sea exactamente 9 y que solo contenga dígitos
+                telefonoValido = true;
+                int longitudTelefono = 0;  // Contador de caracteres
+
+                for (int j = 0; j < telefono.length(); j++) {
+                    longitudTelefono++;  // Contar caracteres manualmente
+
+                    // Verificar que cada carácter es un dígito numérico
+                    if (telefono.charAt(j) < '0' || telefono.charAt(j) > '9') {
+                        telefonoValido = false;
+                        break;
+                    }
+                }
+
+                // Comprobar si la longitud total es 9
+                if (longitudTelefono != 9) {
+                    telefonoValido = false;
+                }
+
+                if (!telefonoValido) {
+                    System.out.println("Error: el teléfono debe tener exactamente 9 dígitos numéricos.");
+                }
+            } while (!telefonoValido);
+            telefonos[contadorUsuarios] = telefono;
+            
+            
+           
+            
+            
+            
+            //VALIDAR DNI´S
+            String dni;
+            boolean dniValido = false;
+            
+            do {
+            	System.out.print("DNI: ");
+            	dni = sc.nextLine();
+            	
+            	// para comprobar la longitud del dni
+            	dniValido = true;
+            	int longitudDni = 0;
+            	
+            	for (int i = 0; i < dni.length(); i++) {
+            		longitudDni++; // para contar la longitud del dni
+            		
+            		if(i < 8) { // para comprobar que son los primeros " 8 numeros"
+            			
+            			if (dni.charAt(i) < '0' || dni.charAt(i) > '9') { // para verificar que son numeros
+            				
+            				dniValido = false;
+            				
+            			}
+            		} else if ( i == 8) { // si los 8 primeros son numeros
+            			//comprobamos que el ultimo caracter es una letra
+            			
+            			if (dni.charAt(i) < 'A' || dni.charAt(i) > 'Z' 
+            			&& dni.charAt(i) < 'a' || dni.charAt(i) > 'z') {
+            				
+            				dniValido = false;
+            			}
+            		}
+            	} 
+            	
+            	// ahora comprobamos que el dni tenga 9 caracteres en total
+            	
+            	if(longitudDni != 9) {
+            		dniValido = false;
+            		
+            	}
+            	if (!dniValido) {
+            		System.out.println("El DNI no es válido");	
+            	}
+            	  	
+            	
+            }while(!dniValido);
+
+            dnis[contadorUsuarios] = dni;
+            
+            
+           
+            
+            
+            
+            //VALIDAR FECHA DE NACIMIENTO
+                 //se coje la posicion charAt 0 que es el caracter 1 y se le resta -'0', ( el -'0' convierte el caracter
+			    // a numero) entonces el char 1 = numero 1, a eso dependiendo de la  posicion se le tendria 
+			   // que multiplicar * 10, 100, 1000 dependiendo del los deimales q tengan, 2 * 1000 = 2000
+			   // enronces haciendo la suma de todo eso, se quedaria la fecha completa ejemplo dia 
+			   // (1*10= 10) + 3 == 13
+            
+            String fechaNacimiento;
+            String fechaActual = "01.11.2024"; // he puesto una fecha actual por defecto
+            boolean edadValida = false;
+            boolean fechaValida = false;
+            
+            do {
+            
+            
+            edadValida = true;	
+            System.out.print("Fecha de Nacimiento (dd/mm/yyyy): ");
+            	fechaNacimiento = sc.nextLine();
+            	
+            fechaValida = (fechaNacimiento.length() == 8 );
+            	
+            // Convertir FECHA NACIMIENTO en valores numericos
+            	
+            int diaNacimiento = (fechaNacimiento.charAt(0)-'0') * 10 + (fechaNacimiento.charAt(1)-'0');
+        		
+        	int mesNacimiento = (fechaNacimiento.charAt(3)-'0') * 10 + (fechaNacimiento.charAt(4)- '0');
+        		
+        	int anoNacimiento = (fechaNacimiento.charAt(6)-'0') * 1000 + (fechaNacimiento.charAt(7)-'0') * 100 +
+        				(fechaNacimiento.charAt(8)-'0') * 10 + (fechaNacimiento.charAt(9)- '0');
+        	
+        	// controlar que la fecha sea 8 dçigitos // ESTO HAY QUE REPASARLO
+        	for (int i = 0; i < fechaNacimiento.length(); i++) {
+        	
+        		if (fechaNacimiento.charAt(i) < '0' || fechaNacimiento.charAt(i) > '9') {
+        		  fechaValida = false;
+        		  System.out.print("El formato es (dd/mm/yyyy): ");
+        	  }
+        	}
+        	//Convertir FECHA ACTUAL en valores numericos 
+        	
+        	int diaActual = (fechaActual.charAt(0)-'0') * 10 + (fechaActual.charAt(1)-'0');
+    		
+    		int mesActual= (fechaActual.charAt(3)-'0') * 10 + (fechaActual.charAt(4)- '0');
+    		
+    		int anoActual= (fechaActual.charAt(6)-'0') * 1000 + (fechaActual.charAt(7)-'0') * 100 +
+    				     (fechaActual.charAt(8)-'0') * 10 + (fechaActual.charAt(9)- '0');
+    		
+    		//calculamos la edad
+    		int edad = anoActual - anoNacimiento;
+    		
+    		// verificamos que ha pasado el cumpleaños y si no, restamos un año
+    		if ( mesNacimiento < mesActual || (mesNacimiento== mesActual && diaNacimiento > diaActual )) {
+    			edad--;
+    		}
+    		
+    		// calculamos que sea +18
+    		 if(edad < 18) {
+    			 edadValida = false;
+    			 System.out.println("Eres menor de edad");
+    		 }
+    		
+    		 
+    		 if (!edadValida || !fechaValida) {
+    			 System.out.println("La edad nos es válida");
+    		 }
+    		 
+    		 
+            } while (!edadValida);
+    		 fechasNacimiento[contadorUsuarios] =fechaNacimiento;
+
+            
+    		 
+    		 
+    		 
+    		 
+    		 // VALIDAR LOGIN
+             String login;
+             do {
+                 System.out.print("Login: ");
+                 login = sc.nextLine();
+                 
+                 if (login.length() < 1 || login.length() > 100) {
+                     System.out.println("Error: El nombre de usuario debe tener entre 1 y 100 caracteres.");
+                 }
+             } while (login.length() < 1 || login.length() > 100);
+            logins[contadorUsuarios] = login;
+
+            
+           
+            
+            
+            
+            
+            // VALIDAR PASWORD
+            String pasword;
+            String paswordConfirmacion;
+            boolean paswordCorrecto;
+
+            do {
+                paswordCorrecto = true;
+                System.out.print("Password: ");
+                pasword = sc.nextLine();
+
+                // Comprobar longitud de la contraseña
+                if (pasword.length() < 8 || pasword.length() > 100) {
+                    paswordCorrecto = false;
+                    System.out.println("Error: El password debe tener al menos 8 caracteres.");
+                }
+
+                // Inicializar los requisitos de la contraseña
+                boolean tieneMayuscula = false;
+                boolean tieneMinuscula = false;
+                boolean tieneNumero = false;
+                boolean tieneCaracterEspecial = false;
+
+                // Verificar cada carácter de la contraseña
+                for (int i = 0; i < pasword.length(); i++) {
+                    char c = pasword.charAt(i);
+                    // Comprobar si es mayúscula
+                    if (c >= 'A' && c <= 'Z') {
+                        tieneMayuscula = true;
+                    }
+                    // Comprobar si es minúscula
+                    else if (c >= 'a' && c <= 'z') {
+                        tieneMinuscula = true;
+                    }
+                    // Comprobar si es un dígito
+                    else if (c >= '0' && c <= '9') {
+                        tieneNumero = true;
+                    }
+                    // Comprobar si es un carácter especial
+                    else if (c == '!' || c == '@' || c == '#' || c == '$' || c == '%' || c == '^' || c == '&' ||
+                             c == '*' || c == '(' || c == ')' || c == '_' || c == '+' || c == '-' ||
+                             c == '|' || c == ';' || c == ':' || c == '\'' || c == '"' || c == '<' || c == '>' ||
+                             c == ',' || c == '.' || c == '?' || c == '/' || c == '~' ) {
+                        tieneCaracterEspecial = true;
+                    }
+                }
+
+                // Verificar que se cumplan todos los requisitos
+                if (!tieneMayuscula || !tieneMinuscula || !tieneNumero || !tieneCaracterEspecial) {
+                    paswordCorrecto = false;
+                    System.out.println("Error: El password debe incluir 1 mayúscula, 1 minúscula, 1 carácter especial y 1 número.");
+                }
+
+                // Solicitar confirmación del password
+                System.out.print("Confirma el password: ");
+                paswordConfirmacion = sc.nextLine();
+
+                // Verificar que las contraseñas coincidan
+                if (!pasword.equals(paswordConfirmacion)) {
+                    paswordCorrecto = false;
+                    System.out.println("Error: Los passwords no coinciden.");
+                }
+
+            } while (!paswordCorrecto); // Repetir hasta que se ingrese una contraseña válida
+
+            System.out.println("Contraseña válida y confirmada.");
+            passwords[contadorUsuarios] = pasword;
+
+            contadorUsuarios++;
+
+            
+            
+          
+            
+            //AGREGAR OTRO USUARIO
+            System.out.print("¿Desea agregar otro usuario? (s/n): ");
+            String respuesta = sc.nextLine();
+            if (respuesta.equals("n")) {
+                break; // Salir del bucle si el usuario elige "n"
+            }
+        }
+
+      
+        
+        
+        //MOSTRAR LA LISTA DE USUARIOS REGISTRADOS
+        System.out.println("\n--- Usuarios Registrados ---");
+        for (int i = 0; i < contadorUsuarios; i++) {
+            System.out.println("Usuario #" + (i + 1));
+            System.out.println("Nombre: " + nombres[i]);
+            System.out.println("Apellido: " + apellidos[i]);
+            System.out.println("Email: " + mails[i]);
+            System.out.println("Teléfono: " + telefonos[i]);
+            System.out.println("DNI: " + dnis[i]);
+            System.out.println("Fecha de Nacimiento: " + fechasNacimiento[i]);
+            System.out.println("Login: " + logins[i]);
+            System.out.println("Password: " + passwords[i]);
+            System.out.println();
+        }
+
+        sc.close(); 
+    }
+    
+    public static void ValidarLongitud () { //FUNCION PARA VALIDAR LONGITUD NOMBRE Y APELLIDO
+    	System.out.print("Nombre (1-100 caracteres): ");
+        String nombre = sc.nextLine();
+        if (nombre.length() < 1 || nombre.length() > 100) {
+            System.out.println("Error: el nombre debe tener entre 1 y 100 caracteres.");
+        }  
+        
+    	System.out.print("Apellido (1-100 caracteres): ");
+        String apellido = sc.nextLine();
+        if (apellido.length() < 1 || apellido.length() > 100) {
+            System.out.println("Error: el apellido debe tener entre 1 y 100 caracteres.");
+        }   
+    }
+    
+    
+    public static void validarMail() { //FUNCION PARA VALIDAR EMAIL
+    	System.out.print("Email: "); // solicitamos el correo
+        String email = sc.nextLine();
+        
+        // iniciamos las variables 
+        boolean tieneArroba = false;
+        boolean tienePunto = false;
+        
+        // recorremos el correo
+        
+        for (int i = 0; i< email.length(); i++) {
+        	char c = email.charAt(i);
+        	
+        	if(c == '@') {
+        		tieneArroba = true;
+        	}
+        	if (c == '.') {
+        		tienePunto= true;
+        	}
+        }
+        
+        //validamos que tenga @ y tenga .
+        
+        if ( tieneArroba && tienePunto) {
+        	
+        	boolean esValido = true;
+        	
+        }else {
+        	System.out.println("El correo no es válido");
+        }
+    }    
+    
+    public static void Validar() { //FUNCION QUE HACE EL DO WHILE QUE VALIDA NOMBRE Y APELLIDO
+    	String nombre = "";
+        String apellido = "";
+        String email;
+        boolean esValido= false;
+        
+        do {
+            ValidarLongitud();	//LLAMO A LA FUNCION QUE VALIDA LA LONGITUD
+		}
+        while (nombre.length() < 0 || nombre.length() > 100 && apellido.length() < 0 || apellido.length() > 100);
+        nombres[contadorUsuarios] = nombre;
+        apellidos[contadorUsuarios] = apellido;
+	}
+    
+    
+    
+    
+    
+    
+    
+    
+}
