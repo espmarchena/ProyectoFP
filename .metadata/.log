@@ -2971,3 +2971,156 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-11-18 21:10:14.051 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=23
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-11-18 21:10:31.606
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-11-18 21:10:41.601
+!MESSAGE Logback config file: C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-11-18 21:10:42.486
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-11-18 21:10:42.486
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-11-18 21:10:42.803
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-11-18 21:10:42.803
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-11-18 21:10:47.217
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\Esperanza Marchena\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.0.v20240919-1706\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Dspring.config.location=classpath:/application.properties
+-Xlog:jni+resolve=off
+-XX:ErrorFile=C:/Users/Esperanza Marchena/Desktop/DAW/PROGRAMACION/PRIMER TRIMESTRE/PrimerTrimestre/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1731960647217
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\Users\Esperanza Marchena\eclipse\java-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.58.0.202410160331\servers\spring-boot-language-server\spring-boot-language-server-1.58.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-11-18 21:10:47.219
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-11-18 21:10:47.237
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 1824
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-11-18 21:10:48.333
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Esperanza Marchena'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.core 4 0 2024-11-18 21:10:48.405
+!MESSAGE Remove repository mapping of Git mapped resource for which project or mapped git repository has disappeared: 'RepositoryMapping[<empty> -> '.git', absolute path: 'C:/Users/Esperanza Marchena/Desktop/DAW/PROGRAMACION/PRIMER TRIMESTRE/PrimerTrimestre/PrimerTrimestre_Programacion/.git' ]'
+!STACK 0
+java.io.FileNotFoundException: 
+	at org.eclipse.egit.core.project.GitProjectData.logAndUnmapGoneMappedResource(GitProjectData.java:751)
+	at org.eclipse.egit.core.project.GitProjectData.map(GitProjectData.java:714)
+	at org.eclipse.egit.core.project.GitProjectData.remapAll(GitProjectData.java:678)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:661)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:217)
+	at org.eclipse.egit.core.project.RepositoryMapping.getProjectData(RepositoryMapping.java:335)
+	at org.eclipse.egit.core.project.RepositoryMapping.findMapping(RepositoryMapping.java:356)
+	at org.eclipse.egit.core.project.RepositoryMapping.getMapping(RepositoryMapping.java:296)
+	at org.eclipse.egit.core.internal.util.ResourceUtil.getRepository(ResourceUtil.java:708)
+	at org.eclipse.egit.core.internal.info.GitItemStateFactory.getIndexDiffDataOrNull(GitItemStateFactory.java:106)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:194)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:172)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:250)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:359)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:345)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.queue(DecorationScheduler.java:410)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:388)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-11-18 21:10:48.519
+!MESSAGE Unmapping gone mapped resource PrimerTrimestre_Programacion failed
+!STACK 1
+org.eclipse.team.core.TeamException: Could not delete file C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at org.eclipse.team.internal.core.TeamPlugin.wrapException(TeamPlugin.java:159)
+	at org.eclipse.team.core.RepositoryProvider.unmap(RepositoryProvider.java:319)
+	at org.eclipse.egit.core.project.GitProjectData$UnmapJob.run(GitProjectData.java:796)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Could not delete file C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at org.eclipse.egit.core.GitProvider.deconfigure(GitProvider.java:74)
+	at org.eclipse.team.core.RepositoryProvider.unmap(RepositoryProvider.java:299)
+	... 2 more
+Caused by: java.io.IOException: Could not delete file C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at org.eclipse.jgit.util.FileUtils.handleDeleteException(FileUtils.java:233)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:226)
+	at org.eclipse.egit.core.project.GitProjectData.deletePropertyFiles(GitProjectData.java:586)
+	at org.eclipse.egit.core.project.GitProjectData.deletePropertyFilesAndUncache(GitProjectData.java:580)
+	at org.eclipse.egit.core.project.GitProjectData.deconfigure(GitProjectData.java:259)
+	at org.eclipse.egit.core.GitProvider.deconfigure(GitProvider.java:72)
+	... 3 more
+Caused by: java.nio.file.AccessDeniedException: C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:105)
+	at java.base/java.nio.file.Files.delete(Files.java:1153)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:192)
+	... 7 more
+!SUBENTRY 1 org.eclipse.team.core 4 0 2024-11-18 21:10:48.531
+!MESSAGE Could not delete file C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not delete file C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at org.eclipse.egit.core.GitProvider.deconfigure(GitProvider.java:74)
+	at org.eclipse.team.core.RepositoryProvider.unmap(RepositoryProvider.java:299)
+	at org.eclipse.egit.core.project.GitProjectData$UnmapJob.run(GitProjectData.java:796)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Could not delete file C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at org.eclipse.jgit.util.FileUtils.handleDeleteException(FileUtils.java:233)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:226)
+	at org.eclipse.egit.core.project.GitProjectData.deletePropertyFiles(GitProjectData.java:586)
+	at org.eclipse.egit.core.project.GitProjectData.deletePropertyFilesAndUncache(GitProjectData.java:580)
+	at org.eclipse.egit.core.project.GitProjectData.deconfigure(GitProjectData.java:259)
+	at org.eclipse.egit.core.GitProvider.deconfigure(GitProvider.java:72)
+	... 3 more
+Caused by: java.nio.file.AccessDeniedException: C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:105)
+	at java.base/java.nio.file.Files.delete(Files.java:1153)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:192)
+	... 7 more
+!SUBENTRY 2 org.eclipse.egit.core 4 0 2024-11-18 21:10:48.531
+!MESSAGE Could not delete file C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+!STACK 0
+java.io.IOException: Could not delete file C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at org.eclipse.jgit.util.FileUtils.handleDeleteException(FileUtils.java:233)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:226)
+	at org.eclipse.egit.core.project.GitProjectData.deletePropertyFiles(GitProjectData.java:586)
+	at org.eclipse.egit.core.project.GitProjectData.deletePropertyFilesAndUncache(GitProjectData.java:580)
+	at org.eclipse.egit.core.project.GitProjectData.deconfigure(GitProjectData.java:259)
+	at org.eclipse.egit.core.GitProvider.deconfigure(GitProvider.java:72)
+	at org.eclipse.team.core.RepositoryProvider.unmap(RepositoryProvider.java:299)
+	at org.eclipse.egit.core.project.GitProjectData$UnmapJob.run(GitProjectData.java:796)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.AccessDeniedException: C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre\.metadata\.plugins\org.eclipse.core.resources\.projects\PrimerTrimestre_Programacion\org.eclipse.egit.core
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.delete(AbstractFileSystemProvider.java:105)
+	at java.base/java.nio.file.Files.delete(Files.java:1153)
+	at org.eclipse.jgit.util.FileUtils.delete(FileUtils.java:192)
+	... 7 more
