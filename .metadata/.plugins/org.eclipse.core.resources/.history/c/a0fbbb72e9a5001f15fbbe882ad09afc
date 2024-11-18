@@ -52,6 +52,7 @@ public class ArraysNumAleatoriosPintarMaxMinMedia2510 {
 		System.out.println("El número menor introducido es: " + numeroMenor);
 		
 		int suma= 0;
+		int media= 0;
 		for (int i = 0; i < tabla.length; i++) {				 // PASO 4
 			suma= suma + tabla[i]; //suma += tabla[i];
 		}
