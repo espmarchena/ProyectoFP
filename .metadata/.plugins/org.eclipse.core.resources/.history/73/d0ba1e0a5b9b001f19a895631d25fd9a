@@ -1,0 +1,31 @@
+package estudiandoparaelexamen1;
+
+import java.util.Scanner;
+
+public class e0511 {
+
+	public static void main(String[] args) {
+		// Introducir numeros hasta 0 o multiplo de 5. Y si entra num par mostrar que eso ha pasado
+		
+		Scanner sc= new Scanner (System.in);
+		int num=1;
+		boolean Multiplo = num%5!=0;
+		boolean Par = num%2==0;
+		
+		
+		while(num!=0 || Multiplo) {
+			System.out.println("numerito:");
+			num = sc.nextInt();
+		}
+		
+		if (Par) {
+			System.out.println("se ha entrado un número par");
+		}
+		else {
+			System.out.println("no se ha entrado un numero par");
+		}
+			
+	sc.close();		
+	}
+
+}

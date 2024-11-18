@@ -1,0 +1,10 @@
+package estudiandoparaelexamen1;
+
+public class For_AbecedarioAlternandoMayusMinus_Repe {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

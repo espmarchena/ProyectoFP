@@ -1,0 +1,46 @@
+package deberesenclase;
+
+public class FuncionesArrays_NumAleatorio {
+
+	public static void main(String[] args) {
+		// funcion que hace array 10 numeros aleatorio
+		// funcion que recibe el array y te diga cuantos pares hay
+
+		
+		int tabla[] = new int [10];
+    	int nAleatorio= 0;
+  
+    	public static int numAleatorio (int[]) {
+	    	for (int i=0; i<tabla.length; i++) {	               //RELLENAR TABLA DE 10 NUMEROS ALEATORIOS
+	    		int max=10;
+	    		int min=0;
+	    		int range= (max-min) +1;
+	    		
+	    		nAleatorio = (int) ((range * Math.random()) +min);
+	            
+	            tabla[i]= nAleatorio;
+	    	}
+	    	return tabla[];
+    	}
+    	
+    	for (int i=0; i<tabla.length; i++) {                  	//PINTAR LOS NUMEROS
+            System.out.print(tabla[i] + " "); 
+    	}
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

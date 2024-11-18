@@ -1,0 +1,34 @@
+package deberesenclase;
+
+
+import java.util.Scanner;
+
+public class PedirLongitudTablaFuncionFibonacci {
+	static Scanner sc;	
+	
+	public static void main(String[] args) {
+		//pedir numero que sera la longitud de mi tabla
+		//el algoritmo de fibonacci llevarlo a una funcion que devuelve la tabla
+		
+		pedirNumero("Dame longitud de la tabla:");
+
+	}
+
+	public static int pedirNumero(String mensaje) { //FUNCION PARA PEDIR EL NUMERO
+		System.out.println(mensaje);
+		int numero = sc.nextInt();
+		return numero;
+	}
+	
+	public static int[] tabla (int longitud) {
+		int []tabla = new int[longitud];
+		return tabla;
+	}
+	
+	
+	
+	
+	
+	
+	
+}
