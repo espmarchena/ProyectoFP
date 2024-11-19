@@ -47,7 +47,7 @@ public class FuncionesArrays_NumsAleatorios {
  
     public static int contarNumerosPares(int[] tabla, boolean pares) { // Función que recibe un array y un boolean que si es true devuelve los pares y si es false devuelve los impares
         
-        int contador = 0; // Inicializar un contador para los números pares o impares
+        int contador = 0; // Inicializar un contador para los números pares
         
         // Recorrer cada número en el array usando un bucle tradicional
         for (int i = 0; i < tabla.length; i++) {
@@ -63,19 +63,4 @@ public class FuncionesArrays_NumsAleatorios {
         return contador; // Devolver la cantidad de números pares encontrados
     }
 	
-    
-    public static int[] obtenerSubcontunjoParesImpares (int tabla[], boolean pares, int cantidad) {
-    	
-    	int tablaSubconjunto[] = new int [cantidad]; //creo una tabla para guardar los numeros, con una cantidad dada por parametro cuando llame a la funcion desde el main
-    	int posicionSubconjunto= 0; //esto es la i de la nueva tabla
-    	
-    	for (int i = 0; i < tabla.length; i++) { //recorre mi tabla de numeros aleatorios
-    		tablaSubconjunto[posicionSubconjunto++] = tabla[i]; // la relleno con los numeros pares o impares diciendole que lo haga en la posicion correcta aumentando una en cada vuelta que de el bucle,
-    		//ya que si no lo pongo todos los valores van a la posicion en la que etaban en la tabla inicial de los numeros aleatorios
-    		
-    	}
-    	
-    	return tablaSubconjunto;
-    }
-    
 }
