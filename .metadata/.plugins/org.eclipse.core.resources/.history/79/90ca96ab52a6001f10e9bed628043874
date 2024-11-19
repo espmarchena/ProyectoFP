@@ -3,8 +3,7 @@ package deberesenclase;
 public class FuncionesArrays_NumsAleatorios {
 
 	public static void main(String[] args) {
-		
-		System.out.println("\nArray de números aleatorios generado: ");
+	
 		int[] numerosAleatorios = generarArrayAleatorio(10); // Funcion para generar un array de 10 números aleatorios
 		pintarArray(numerosAleatorios); //pinta el array de numeros aleatorios
         

@@ -3,25 +3,21 @@ package deberesenclase;
 public class FuncionesArrays_NumsAleatorios {
 
 	public static void main(String[] args) {
-		
-		System.out.println("\nArray de números aleatorios generado: ");
+	
 		int[] numerosAleatorios = generarArrayAleatorio(10); // Funcion para generar un array de 10 números aleatorios
-		pintarArray(numerosAleatorios); //pinta el array de numeros aleatorios
+        
+        System.out.print("Array generado: ");
+        
+        for (int i = 0; i < numerosAleatorios.length; i++) { //recorro la tabla
+            System.out.print(numerosAleatorios[i] + " "); // Imprimo el array generado con espacio entre cada número
+        }
+		
         
         int cantidadPares = contarNumerosPares(numerosAleatorios, true); // Funcion para contar cuántos números pares hay en el array
         System.out.println("\nCantidad de números pares en el array: " + cantidadPares);
         
         int cantidadImpares = contarNumerosPares(numerosAleatorios, false); // Funcion para contar cuántos números impares hay en el array
-        System.out.println("\nCantidad de números impares en el array: " + cantidadImpares);
-        
-        System.out.println("\nLos número de pares son: ");
-        int subconjuntoPares[] =  obtenerSubcontunjoParesImpares(numerosAleatorios, true, cantidadPares);
-        pintarArray(subconjuntoPares);
-        
-        System.out.println("\nLos números de impares son: ");
-        int subconjuntoImpares[] = obtenerSubcontunjoParesImpares(numerosAleatorios, false, cantidadImpares);
-        pintarArray(subconjuntoImpares);
-        
+        System.out.println("\nCantidad de números pares en el array: " + cantidadImpares);
 	}
 
 	public static int obtenerNumeroAleatorio() { // Funcion para obtener los numeros aleatorios
@@ -74,25 +70,12 @@ public class FuncionesArrays_NumsAleatorios {
     	int posicionSubconjunto= 0; //esto es la i de la nueva tabla
     	
     	for (int i = 0; i < tabla.length; i++) { //recorre mi tabla de numeros aleatorios
-    		if (pares && tabla[i] % 2 == 0) { // Verificar si el número es par(true) (divisible por 2)
     		tablaSubconjunto[posicionSubconjunto++] = tabla[i]; // la relleno con los numeros pares o impares diciendole que lo haga en la posicion correcta aumentando una en cada vuelta que de el bucle,
     		//ya que si no lo pongo todos los valores van a la posicion en la que etaban en la tabla inicial de los numeros aleatorios
-    		}
-    		else if (!pares && tabla[i] % 2 != 0) { // // Verificar si el número es impar(false) (no divisible por 2)
-    			tablaSubconjunto[posicionSubconjunto++] = tabla[i];
-    		 }
+    		
     	}
+    	
     	return tablaSubconjunto;
     }
-    
-    
-    public static void pintarArray (int[]tabla) {
-    
-        for (int i = 0; i < tabla.length; i++) { //recorro la tabla
-            System.out.print(tabla[i] + " "); // Imprimo el array generado con espacio entre cada número
-        }
-    }
-    
-    
     
 }

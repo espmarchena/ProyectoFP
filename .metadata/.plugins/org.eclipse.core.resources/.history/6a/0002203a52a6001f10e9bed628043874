@@ -3,8 +3,7 @@ package deberesenclase;
 public class FuncionesArrays_NumsAleatorios {
 
 	public static void main(String[] args) {
-		
-		System.out.println("\nArray de números aleatorios generado: ");
+	
 		int[] numerosAleatorios = generarArrayAleatorio(10); // Funcion para generar un array de 10 números aleatorios
 		pintarArray(numerosAleatorios); //pinta el array de numeros aleatorios
         
@@ -13,15 +12,6 @@ public class FuncionesArrays_NumsAleatorios {
         
         int cantidadImpares = contarNumerosPares(numerosAleatorios, false); // Funcion para contar cuántos números impares hay en el array
         System.out.println("\nCantidad de números impares en el array: " + cantidadImpares);
-        
-        System.out.println("\nLos número de pares son: ");
-        int subconjuntoPares[] =  obtenerSubcontunjoParesImpares(numerosAleatorios, true, cantidadPares);
-        pintarArray(subconjuntoPares);
-        
-        System.out.println("\nLos números de impares son: ");
-        int subconjuntoImpares[] = obtenerSubcontunjoParesImpares(numerosAleatorios, false, cantidadImpares);
-        pintarArray(subconjuntoImpares);
-        
 	}
 
 	public static int obtenerNumeroAleatorio() { // Funcion para obtener los numeros aleatorios
@@ -87,7 +77,8 @@ public class FuncionesArrays_NumsAleatorios {
     
     
     public static void pintarArray (int[]tabla) {
-    
+    	System.out.print("Array generado: ");
+        
         for (int i = 0; i < tabla.length; i++) { //recorro la tabla
             System.out.print(tabla[i] + " "); // Imprimo el array generado con espacio entre cada número
         }
