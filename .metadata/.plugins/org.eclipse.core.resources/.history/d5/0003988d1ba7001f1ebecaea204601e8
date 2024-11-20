@@ -1,0 +1,32 @@
+package deberesenclase;
+
+public class Matriz_RellenarNumsAleatorios {
+
+	public static void main(String[] args) {
+		
+		/*int max=10;
+		int min=0;
+		int range= (max-min) +1;
+		int nAleatorio = (int) ((range * Math.random()) + min);*/
+
+		int tabla[][] = new int [10][10];				
+		 
+		int max=10;
+		int min=0;
+		int range= (max-min) +1;
+		    	
+		for (int i=0; i<tabla.length; i++) {	               
+
+			for (int j=0; j<tabla[i].length; j++) {  //uso la longitud de las filas de la tabla
+				int nAleatorio = (int) (Math.random() * range + min);
+				tabla[i][j] = nAleatorio;
+				System.out.print(tabla[i] + "/n" + tabla[j]);
+			}
+			
+		}
+		
+		
+		
+	}
+
+}
