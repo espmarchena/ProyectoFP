@@ -67,7 +67,7 @@ public class Matriz_RellenarNumsAleatorios {
 		 * for (int i=0; i<tabla.length;i++){
 		 * sumaDiagonalP+=tabla[i][i];            // tabla[i][i] porque los valores son los mismos  0,0  1,1  2,2 ......
 		 *}
-		 FORMA LOGICA DE HACERLO*/
+		 */
 		int sumaDiagonalP =0;
 		for (int i=0, j=0; i<tabla.length && j<tabla.length ; i++, j++) {  
 			sumaDiagonalP+=tabla[i][j];
@@ -78,9 +78,9 @@ public class Matriz_RellenarNumsAleatorios {
 		
 		
 		/* for (int i=0; i<tabla.length;i++){
-		 * suma+=tabla[i][(tabla.length-1)-i];        //  2,0  1,1  0,2 ..........
+		 * suma+=tabla[i][(tabla.length-1)-i];
 		 *}
-		 FORMA LOGICA DE HACERLO*/
+		 */
 		int sumaDiagonalS =0;
 		for (int i=0, j=(tabla.length)-1; i<tabla.length && j>=0 ; i++, j--) {  
 			sumaDiagonalS+=tabla[i][j];
