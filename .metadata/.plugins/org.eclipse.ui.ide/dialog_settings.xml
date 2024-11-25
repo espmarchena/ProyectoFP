@@ -57,4 +57,7 @@
 		<list key="ENABLED_TRANSFERS">
 		</list>
 	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item key="OUTSIDE_LOCATION" value="C:\Users\Esperanza Marchena\Desktop\DAW\PROGRAMACION\PRIMER TRIMESTRE\PrimerTrimestre"/>
+	</section>
 </section>
