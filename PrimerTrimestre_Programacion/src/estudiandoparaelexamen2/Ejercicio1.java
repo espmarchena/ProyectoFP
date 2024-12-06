@@ -15,7 +15,7 @@ public class Ejercicio1 {
 	}
 
 	public static int[] devolverArrayAlreves (int[] arrayInicial) { //funcion que devuelve array y (que recibe un array)
-		int[] arrayFinal = new int [arrayInicial.length]; // no se de que tamaño va a ser pero como voy a devolver uno exactamente igual, uso arrayInicial.length
+		int[] arrayFinal = new int [arrayInicial.length]; // declaro un array final que no se de que tamaño va a ser pero como voy a devolver uno exactamente igual, uso arrayInicial.length
 		int contadorFinal = arrayInicial.length-1; // empieza a asignar desde el final del array del derecho hasta el principio (le va dando la vuelta)
 		
 		for (int i=0; i<arrayInicial.length; i++) {
