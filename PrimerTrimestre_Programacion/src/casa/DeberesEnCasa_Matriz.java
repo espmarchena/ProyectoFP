@@ -4,7 +4,25 @@ public class DeberesEnCasa_Matriz {
 
 	public static void main(String[] args) {
 		// TODO  funcion que recibe matriz aleatoria y devuelve array con diagonal principal
+		
+		int[][] matriz = generarArrayAleatorio(); // Generar una matriz aleatoria
+	    int[] diagonalPrincipal = diagonal(matriz); // Obtener la diagonal principal
 
+	    // Imprimir la matriz
+	    System.out.println("Matriz:");
+	    for (int i = 0; i < matriz.length; i++) {
+	        for (int j = 0; j < matriz[i].length; j++) {
+	            System.out.print(matriz[i][j] + " ");
+	        }
+	        System.out.println();
+	    }
+
+	    // Imprimir la diagonal principal
+	    System.out.println("Diagonal principal:");
+	    for (int num : diagonalPrincipal) {
+	        System.out.print(num + " ");
+	    }
+		
 	}
 
 	public static int obtenerNumeroAleatorio() { // Funcion para obtener los numeros aleatorios
@@ -33,12 +51,12 @@ public class DeberesEnCasa_Matriz {
      }
 	
 	public static int[] diagonal (int matriz[][]){
-	int Diagonal;
+	int[] diagonal = new int[matriz.length];
 	for (int i=0, j=0; i<matriz.length && j<matriz.length ; i++, j++) {  
-		Diagonal = matriz[i][j];
+		diagonal[i] = matriz[i][j];
 	}
 	
-	return diagonal[];
+	return diagonal;
 	}
 	
 }
