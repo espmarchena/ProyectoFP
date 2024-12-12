@@ -1,4 +1,4 @@
-package examen20241108;
+package examencorregido20241108;
 
 public class Ejercicio4 {
 

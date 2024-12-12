@@ -18,3 +18,4 @@ public class Ejercicio6 {
 	} 
 } 
  //como no estoy devolviendo el valor (return), a 'num' le estoy haciendo una copia pero no la uso, por lo que no vale 5 sino 0
+//pero en los arrays y matrices SI se guarda lo que pase en la funcion!!!!!!!!!

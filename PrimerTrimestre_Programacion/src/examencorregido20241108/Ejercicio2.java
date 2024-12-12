@@ -1,4 +1,4 @@
-package examen20241108;
+package examencorregido20241108;
 
 import java.util.Scanner;
 

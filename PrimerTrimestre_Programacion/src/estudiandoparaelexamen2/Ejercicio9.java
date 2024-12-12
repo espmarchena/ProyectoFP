@@ -10,6 +10,7 @@ public class Ejercicio9 {
 							{"Marta", "Batería"},
 							{"Manuel", "Batería"},
 							{"Rocío", "Guitarra"} }; 
+		
 		//Crea una función que recibe la matriz y un instrumento y devuelve un array con los nombres de los alumnos que tocan el instrumento recibido.
 		//El array debe tener el tamaño exacto, no pueden sobrar posiciones. 
 
@@ -28,10 +29,11 @@ public class Ejercicio9 {
 			}
 		}
 		String[] nombres = new String [contador];
+		int contador2=0;
 		
 		for (int i=0; i<datos.length; i++) {
 			if (datos[i][1].equals(instrumento)){ //en la 'j' pongo '1' porque es la columna 1 donde estan los instrumentos y quiero que sea un valor fijo para controlar los instrumentos
-				nombres[contador++] = datos[i][0]; //en la 'i' pongo '0' porque es la columna 0 donde estan los nombres y quiero que sea un valor fijo para controlar los nombres
+				nombres[contador2++] = datos[i][0]; //en la 'i' pongo '0' porque es la columna 0 donde estan los nombres y quiero que sea un valor fijo para controlar los nombres
 			}
 		}
 		return nombres;
