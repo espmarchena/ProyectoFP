@@ -15,6 +15,7 @@ public class Ejercicio5 {
 		
 		int profesPorCiclo = contarProfesoresPorCiclo(datos, "DAW");
 		System.out.println("Un total de " + profesPorCiclo + " imparten DAW");
+		
 		String moduloPorProfe = obtenerPrimerModuloPorProfesor(datos, "José Manuel");
 		System.out.println("El primer modulo que imparte José Manuel es " + moduloPorProfe);
 		

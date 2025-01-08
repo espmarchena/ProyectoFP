@@ -27,7 +27,6 @@ public class Ejercicio3 {
 		String opcion;
 		
 		do {
-			// Mostrar menú
 			System.out.println("1. Ver resultado de la suma de la diagonal principal");
 			System.out.println("2. Ver resultado de la multiplicación de la diagonal secundaria");
 			System.out.println("0. Salir");
@@ -37,17 +36,11 @@ public class Ejercicio3 {
 
 			switch (opcion) {
 			case "1":
-				// Llamar a la función obtenerSumaNumerosPrincipal
-				int suma = obtenerSumaNumerosPrincipal(matriz);
-				System.out.println("La suma de la diagonal principal es: " + suma);
-				System.out.println();
+				obtenerSumaNumerosPrincipal(matriz);							// Llamar a la función obtenerSumaNumerosPrincipal
 				break;
 
 			case "2":
-				// Llamar a la función obtenerMultiplicacionNumerosSecundaria
-				int multiplicacion = obtenerMultiplicacionNumerosSecundaria(matriz);
-				System.out.println("La multiplicación de la diagonal secundaria es: " + multiplicacion);
-				System.out.println();
+				obtenerMultiplicacionNumerosSecundaria(matriz);					// Llamar a la función obtenerMultiplicacionNumerosSecundaria
 				break;
 
 			case "0":
@@ -63,12 +56,14 @@ public class Ejercicio3 {
 	}
 
 	
+	
 	// Función para obtener la suma de los elementos de la diagonal principal
 	public static int obtenerSumaNumerosPrincipal(int[][] matriz) {
 		int suma = 0;
 		for (int i = 0; i < matriz.length; i++) {
-			suma += matriz[i][i]; // Sumar los elementos de la diagonal principal
+			suma += matriz[i][i]; // Sumo los elementos de la diagonal principal
 		}
+		System.out.println("La suma de la diagonal principal es: " + suma);
 		return suma;
 	}
 
@@ -77,8 +72,10 @@ public class Ejercicio3 {
 	public static int obtenerMultiplicacionNumerosSecundaria(int[][] matriz) {
 		int multiplicacion = 1;
 		for (int i = 0; i < matriz.length; i++) {
-			multiplicacion *= matriz[i][matriz.length - 1 - i]; // Multiplicar los elementos de la diagonal secundaria
+			multiplicacion *= matriz[i][matriz.length - 1 - i]; // Multiplico los elementos de la diagonal secundaria
 		}
+		System.out.println("La multiplicación de la diagonal secundaria es: " + multiplicacion);
 		return multiplicacion;
 	}
+	
 }
