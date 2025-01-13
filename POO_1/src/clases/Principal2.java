@@ -38,13 +38,18 @@ public class Principal2 {
 		g.setNombre("Mi guitarra");
 		g.setNumeroCuerdas(6);
 		//g.setNumeroTeclas(50); no compilaría porque no puede heredar de un hermano, va en piramide
+		g.emitirSonido();
 		
+		/* no lo puedo instanciar asi porque la clase es abstracta
 		InstrumentoMusical im = new InstrumentoMusical(); //padre de guitarra y piano
 		im.setNombre("Mi instrumento");
+		im.emitirSonido(); 
+		*/
 		
 		Piano p = new Piano(); //hijo de instrumentomusical y hermano de guitarra
 		p.setNombre("Mi piano");
 		p.setNumeroTeclas(50);
 		// p.setNumeroCuerdas(50); no compilaría porque no puede heredar de un hermano, va en piramide
+		p.emitirSonido();
 	}
 }
