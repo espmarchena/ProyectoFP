@@ -35,8 +35,8 @@ public class Asignatura { // el constructor se tiene que llamar exactamente igua
 	
 	/*
 	 public Asignatura (String nombre, String profesor, int horas) {
-		super();
-		this.nombre = nombre; // esto significa que al atributo 'origen' le asignas el valor que le llega por parametro al constructor
+		super(); // se refiere al atributo del padre en la herencia, la superclase.
+		this.nombre = nombre; // esto significa que al atributo le asignas el valor de la variable local que le llega por parametro al constructor
 		this.profesor = profesor;
 		this.horas = horas;
 	}
