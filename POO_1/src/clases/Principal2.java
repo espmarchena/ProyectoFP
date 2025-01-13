@@ -45,6 +45,8 @@ public class Principal2 {
 		im.setNombre("Mi instrumento");
 		im.emitirSonido(); 
 		*/
+		InstrumentoMusical im = new Guitarra(); //Como padre puedo ser cualquier objeto dentro de las clases de mis hijos (POLIMORFISMO)
+		InstrumentoMusical[] instrumentos = new InstrumentoMusical[5]; // array de instrumentos musicales, puedo llenarlo de cualquier tipo de instrumentos.
 		
 		Piano p = new Piano(); //hijo de instrumentomusical y hermano de guitarra
 		p.setNombre("Mi piano");
