@@ -33,11 +33,11 @@ public class Asignatura {
 	}
 
 	@Override 
-	public String toString() { //pinta lo que esta pasando
+	public String toString() { //pinta lo que esta pasando. 
 		return "Asignatura [nombre=" + nombre + ", horas=" + horas + "]";
 	}
 
-	
+	//todas las clases de java extienden de una clase Object. Hacen cosas y se pueden sobreescribir: Yo como padre hago algo y como hijo lo heredo pero tb puedo hacer otra.
 	
 	
 	
