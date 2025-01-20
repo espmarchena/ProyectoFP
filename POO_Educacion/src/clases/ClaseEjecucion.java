@@ -1,5 +1,10 @@
 package clases;
 
+import clases.datos.Alumno;
+import clases.datos.Asignatura;
+import clases.datos.Persona;
+import clases.datos.Profesor;
+
 public class ClaseEjecucion {
 
 	public void ejecutar() {
@@ -39,17 +44,21 @@ public class ClaseEjecucion {
 	private Asignatura[] altaAsignatura() {
 		
 		//Creo 4 variables e instancio los objetos de tipo Asignatura:
-		Asignatura aProgramacion = new Asignatura("Programacion", 256); 
-		Asignatura aBaseDatos = new Asignatura("Base de Datos", 220);
-		Asignatura aSistemas = new Asignatura("Sitemas Informaticos", 198);
-		Asignatura aMarcas = new Asignatura("Lenguaje de Marcas", 120);
+		Asignatura aProgramacion = new Asignatura("Programacion", 256); //constructor
+		//Asignatura aProgramacion = new Asignatura(); otra forma de hacerlo, constructor vacío
+		//aProgramacion.setNombre("Programacion"); objeto llamando a un metodo y pasandole valor
+		//aProgramacion.setHoras(256);objeto llamando a un metodo y pasandole valor
+		Asignatura aBaseDatos = new Asignatura("Base de Datos", 220); //constructor
+		Asignatura aSistemas = new Asignatura("Sitemas Informaticos", 198); //constructor
+		Asignatura aMarcas = new Asignatura("Lenguaje de Marcas", 120); //constructor
 				
 		Asignatura[] asignaturas = new Asignatura[5]; //se puede crear array y asignarle valores
 		asignaturas[0] = aProgramacion; // la posicion 0 es igual a lo que hay en el objeto que he llamado aProgramacion
 		asignaturas[1] = aBaseDatos;
 		asignaturas[2] = aSistemas;
 		asignaturas[3] = aMarcas;
-		asignaturas[4] = new Asignatura("Entornos de Desarrollo", 96); // Así no ocupo espacio innecesariamente si no voy a usarlo luego. Declaro una posicion de un array con un objeto Asignatura
+		asignaturas[4] = new Asignatura("Entornos de Desarrollo", 96); // Otra forma de hacerlo. Así no ocupo espacio innecesariamente si no voy a usarlo luego.
+		//Declaro una posicion de un array con un objeto Asignatura
 				
 		return asignaturas;
 	}
@@ -139,10 +148,15 @@ public class ClaseEjecucion {
 		}
 	}
 	
-	private Persona[] obtenerPersonas (Alumno[] alumnos, Profesor[] profesores) {
-		Persona[] personas = new Persona[Alumno[] alumnos, Profesor[] profesores];
-		
-				
+	private Persona[] obtenerPersonas(Alumno[] alumnos, Profesor[] profesores) {
+		Persona[] personas = new Persona[alumnos.length + profesores.length];
+		int i = 0;
+		for (Alumno alumno : alumnos) {
+			personas[i++] = alumno;
+		}
+		for (Profesor profesor : profesores) {
+			personas[i++] = profesor;
+		}
 		return personas;
 	}
 }

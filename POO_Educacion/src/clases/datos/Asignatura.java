@@ -1,4 +1,4 @@
-package clases;
+package clases.datos;
 
 public class Asignatura {
 	

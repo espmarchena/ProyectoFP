@@ -1,6 +1,9 @@
-package clases;
+package clases.datos;
 
 import java.util.Arrays;
+
+import clases.acciones.AlumnosAcciones;
+import clases.acciones.AlumnosFueraAcciones;
 
 public class Alumno extends Persona implements AlumnosAcciones, AlumnosFueraAcciones { //implementa las acciones
 
@@ -26,7 +29,9 @@ public class Alumno extends Persona implements AlumnosAcciones, AlumnosFueraAcci
 	}
 
 	@Override
-	public void irAClase() {	
+	public void irAClase() {
+		//super.irAClase();
+		System.out.println(" y soy un alumno");
 	}
 
 	@Override

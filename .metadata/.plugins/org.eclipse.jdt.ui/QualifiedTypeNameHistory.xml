@@ -6,4 +6,5 @@
     <fullyQualifiedTypeName name="clases.InstrumentoMusical"/>
     <fullyQualifiedTypeName name="clases.ClaseEjecucion"/>
     <fullyQualifiedTypeName name="clases.Asignatura"/>
+    <fullyQualifiedTypeName name="clases.Alumno"/>
 </qualifiedTypeNameHistroy>

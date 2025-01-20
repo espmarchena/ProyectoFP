@@ -1,6 +1,8 @@
-package clases;
+package clases.datos;
 
 import java.util.Arrays;
+
+import clases.acciones.PersonasAcciones;
 
 public class Profesor extends Persona implements PersonasAcciones { //implementa las acciones
 

@@ -1,4 +1,4 @@
-package clases;
+package clases.acciones;
 
 public interface PersonasAcciones { // de base solo defino metodos, no implemento
 
