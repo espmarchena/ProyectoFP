@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;casa.DeberesEnCasa2_1310&apos; to &apos;PedirNumerosHasta0YMultiplicarTodosLosNumeros_1310&apos;&#x0D;&#x0A;- Original project: &apos;PrimerTrimestreProgramacion&apos;&#x0D;&#x0A;- Original element: &apos;casa.DeberesEnCasa2_1310&apos;&#x0D;&#x0A;- Renamed element: &apos;casa.PedirNumerosHasta0YMultiplicarTodosLosNumeros_1310&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DeberesEnCasa2_1310&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;casa{DeberesEnCasa2_1310.java[DeberesEnCasa2_1310" matchStrategy="1" name="PedirNumerosHasta0YMultiplicarTodosLosNumeros_1310" qualified="false" references="true" similarDeclarations="false" stamp="1729496822369" textual="false" version="1.0"/>
-</session>
