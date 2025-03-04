@@ -2,7 +2,7 @@ package es.cesur.ejercicio2poo;
 
 public class Empleado {
 
-	//ATRIBUTOS
+	//ATRIBUTOS con modificador de acceso privado
 	private String nombre;
 	private String apellidos;
 	private String DNI;
@@ -10,7 +10,7 @@ public class Empleado {
 	private String puesto;
 	private String telefono;
 	
-	//CONSTRUCTORES
+	//CONSTRUCTORES por defecto y por parametros
 	public Empleado () {
 		nombre = "";
 		apellidos = "";
@@ -20,7 +20,7 @@ public class Empleado {
 		telefono = "";
 	}
 	
-	public Empleado(String n, String a, String dni, String d, String p, String t) {
+	public Empleado(String n, String a, String dni, String d, String p, String t) { // source/generate constructor using Fields
 		this.nombre = n;
 		this.apellidos = a;
 		this.DNI = dni;
