@@ -3,13 +3,13 @@ package es.cesur.ejercicio5poo;
 public class Coche {
 	private String fabricante;
 	private String modelo;
-	private int añoFabricacion;
+	private int anyoFabricacion;
 	private boolean gasolina;
 	
 	public Coche(String fabricante, String modelo, int añoFabricacion, boolean gasolina) {
 		this.fabricante = fabricante;
 		this.modelo = modelo;
-		this.añoFabricacion = añoFabricacion;
+		this.anyoFabricacion = añoFabricacion;
 		this.gasolina = gasolina;
 	}
 
@@ -30,14 +30,14 @@ public class Coche {
 	}
 
 	public int getAñoFabricacion() {
-		return añoFabricacion;
+		return anyoFabricacion;
 	}
 
-	public void setAñoFabricacion(int añoFabricacion) {
-		this.añoFabricacion = añoFabricacion;
+	public void setAnyoFabricacion(int añoFabricacion) {
+		this.anyoFabricacion = añoFabricacion;
 	}
 
-	public boolean isGasolina() {
+	public boolean getGasolina() {
 		return gasolina;
 	}
 
