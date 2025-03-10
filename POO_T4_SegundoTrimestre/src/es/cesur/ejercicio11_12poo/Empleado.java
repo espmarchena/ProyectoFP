@@ -1,4 +1,4 @@
-package es.cesur.ejercicio11poo;
+package es.cesur.ejercicio11_12poo;
 
 public class Empleado extends Persona{
 	private String puesto;
@@ -20,5 +20,11 @@ public class Empleado extends Persona{
 		this.puesto = puesto;
 	}
 	
+	
+	// POLIMORFISMO. Método saludar en la clase empleado que sobrescribre el metodo saludar de la clase persona
+		public void saludar() {
+			super.saludar();
+			System.out.println("Y mi puesto es " + puesto);
+		}
 	
 }

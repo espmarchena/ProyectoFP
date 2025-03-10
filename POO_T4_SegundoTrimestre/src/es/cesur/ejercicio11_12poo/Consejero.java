@@ -1,9 +1,14 @@
-package es.cesur.ejercicio11poo;
+package es.cesur.ejercicio11_12poo;
 
 public class Consejero extends Empleado{
 
 	private int numero_acciones;
 
+	//CONSTRUCTORES por defecto y por parametros
+		public Consejero() {
+			numero_acciones = 0;
+		}
+	
 	public Consejero(String nombre, String apellidos, String dni, String domicilio, String telefono, String puesto, int numero_acciones) {
 		super(nombre, apellidos, dni, domicilio, telefono, puesto);
 		this.numero_acciones = numero_acciones;

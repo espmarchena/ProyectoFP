@@ -1,4 +1,4 @@
-package es.cesur.ejercicio11poo;
+package es.cesur.ejercicio11_12poo;
 
 public class Persona {
 	private String nombre;
@@ -59,5 +59,10 @@ public class Persona {
 		this.telefono = telefono;
 	}
 	
+	// método saludar
+	public void saludar() {
+		System.out.println("Hola, mi nombre es " + nombre);
+		
+	}
 	
 }
