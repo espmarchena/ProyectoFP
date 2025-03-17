@@ -1,5 +1,6 @@
 package es.cesur.ejercicio11_12poo;
 
+
 public class TestHerencia {
 
 	public static void main(String[] args) {
@@ -17,7 +18,15 @@ public class TestHerencia {
 		empleado2.saludar(); //ejecuta el metodo saludar de la clase empleado porque prevalece el de la clase hija cuando usamos el polimorfismo 
 	
 		Consejero consejero1 = new Consejero("Alvaro", "Fernandez", "85858585N", "C/Mar nº5", "632632632", "cajero", 40);
-		System.out.println(consejero1.getNumero_acciones());
+		System.out.println("El consejero tiene " + consejero1.getNumero_acciones() + " acciones.");
+		
+		Aula aula = new Aula("DAW", 20);
+		System.out.println("El aula de " + aula.getNombreAula() + " tiene un total de " + aula.getNumAlumnos() + " alumnos.");
+		
+		Alumno a1 = new Alumno("Luis Jose", "Cañas", "98989898Q", "C/Rio nº7", "698545487", 26, true, aula);
+		System.out.println("El alumno " + a1.getNombre() + " " + a1.getApellidos() + " tiene " + a1.getEdad() + " años y parece ser que " + a1.isHaPagado() + " ha pagado."
+				 + " Está en la clase de " + a1.getAula().getNombreAula() + " y tiene " + a1.getAula().getNumAlumnos() + " compañeros.");
+
 	}
 
 }
