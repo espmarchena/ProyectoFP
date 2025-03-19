@@ -39,11 +39,5 @@ public class Asignatura {
 	public void setCodigoAsig(String codigoAsig) {
 		this.codigoAsig = codigoAsig;
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }
