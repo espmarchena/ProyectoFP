@@ -7,12 +7,12 @@ public class FicheroTextoEscritura {
 		try // FileWriter también puede lanzar una excepción
 		{
 			// Destino de los datos
-			FileWriter fw = new FileWriter("archivo.txt", true); //con el constructor con dos parametros, al ponerlo true, en vez de machacar el archivo, le añade mas info
+			FileWriter fw = new FileWriter("archivo.txt", true); //con el constructor con dos parametros, al ponerlo true, en vez de machacar el archivo, la conserva y le añade mas info
 			
-			// Buffer de escritura
+			// Buffer de escritura en modo secuencial
 			BufferedWriter bw = new BufferedWriter(fw);
 			
-			// Objeto para la escritura
+			// Objeto para la escritura. Permite dar formato a la escritura
 			PrintWriter salida = new PrintWriter(bw);
 			
 			// Guardamos la primera línea
@@ -28,8 +28,9 @@ public class FicheroTextoEscritura {
 			
 			System.out.println("¡Archivo creado correctamente!");
 			
-		} catch (IOException i) {
+		} catch (IOException i) { //la excepcion que lanza el FileWriter
 			System.out.println("Se produjo un error de Archivo");
+			System.out.println(i.getMessage());
 		}
 	}
 }

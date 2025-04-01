@@ -3,6 +3,7 @@ package es.cesur.FicherosTextoLectura;
 //El paquete java.io posee las clases necesarias para los archivos 
 import java.io.*;
 
+
 public class FicheroTextoLectura {
 	
 	public static void main(String[] args) {

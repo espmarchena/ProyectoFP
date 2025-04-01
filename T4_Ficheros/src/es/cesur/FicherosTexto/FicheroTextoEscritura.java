@@ -26,6 +26,7 @@ public class FicheroTextoEscritura {
 			
 			
 			// Guardamos la primera línea
+			// println es un metodo que tiene la clase PrintWriter. Escribe lo que le pasas por parametros, y ademas el ln introduce un salto de linea
 			salida.println("Primera línea"); //abrimos el primer Stream. Esta será la frase que contenga el archivo
 			
 			// Cerrar el objeto salida, el objeto bw y el fw. En orden inverso a como se ha abierto
