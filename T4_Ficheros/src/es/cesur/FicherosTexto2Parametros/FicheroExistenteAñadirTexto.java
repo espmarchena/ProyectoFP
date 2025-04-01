@@ -1,8 +1,8 @@
-package es.cesur.FicherosTexto2;
+package es.cesur.FicherosTexto2Parametros;
 
 import java.io.*;
 
-public class FicheroTextoEscritura {
+public class FicheroExistenteAñadirTexto {
 	public static void main(String[] args) {
 		try // FileWriter también puede lanzar una excepción
 		{
