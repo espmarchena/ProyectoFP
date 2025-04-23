@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 public class LeerEntero_Ej2{
 	
+	/*2. Leer Entero - Realizar un programa en JAVA que muestre por pantalla el contenido del fichero binario “uno.bin”. */
+	
     public static void main(String[] args) {
     	
         Scanner sc = new Scanner(System.in);

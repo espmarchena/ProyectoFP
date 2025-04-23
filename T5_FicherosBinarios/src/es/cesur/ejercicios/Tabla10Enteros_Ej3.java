@@ -5,6 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
+	/*3. Tabla 10 enteros - Realizar un programa en JAVA que lea una tabla de 10 enteros 
+	por teclado y vaya metiéndolos uno por uno en un fichero binario llamado “tabla.dat”.*/
+
 public class Tabla10Enteros_Ej3 {
 
 	    public static void main(String[] args) {
@@ -35,7 +38,7 @@ public class Tabla10Enteros_Ej3 {
 	            sc.close();
 	            
 	        } catch (IOException e) {
-	            System.err.println("Error al escribir en el fichero: " + e.getMessage());
+	            System.out.println("Error al escribir en el fichero: " + e.getMessage());
 	        }
 	    }
 	}
